@@ -4,18 +4,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+@WebServlet(name = "PageCountServlet", urlPatterns = "/count")
+public class PageCountServlet extends HttpServlet {
 
-@WebServlet(name = "HelloWorldServlet", urlPatterns = "/hello")
-public class HelloWorldServlet extends HttpServlet {
+    long pageViews = 0;
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         res.setContentType("text/html");
-        String userName = req.getParameter ("name");
+        pageViews++;
         PrintWriter out = res.getWriter();
-        if(userName == null) {
-            out.println("<h1><strong><em>Hello, World!</em></strong></h1>");
-        } else {
-            out.println("<h1><strong><em>Hello, " + userName + "</em></strong>!</h1>");
-
-        }
+        out.println("" + pageViews + "");
     }
 }
