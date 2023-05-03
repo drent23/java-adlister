@@ -22,6 +22,5 @@
         <input type="submit" class="btn btn-primary btn-block" value="Submit">
     </form>
 </div>
-
 </body>
 </html>

@@ -10,7 +10,8 @@
 <head>
     <title>Color View</title>
 </head>
-<body>
+<body style="background-color: ${colorToPage}">
+<h1>The color ${colorToPage} is now your background!</h1>
 
 </body>
 </html>
