@@ -1,16 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
-
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
-
     public List<Ad> all() {
         if (ads == null) {
             ads = generateAds();
         }
         return ads;
     }
-
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
