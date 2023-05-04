@@ -11,9 +11,9 @@ public class GuessingServlet extends HttpServlet {
         }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int guess = Integer.parseInt(request.getParameter("numGuess"));
-        if(guess < 1 || guess > 3) {
+        if (guess < 1 || guess > 3) {
             response.sendRedirect(request.getContextPath() + "/guess");
             return;
         }
-
+    }
 }
