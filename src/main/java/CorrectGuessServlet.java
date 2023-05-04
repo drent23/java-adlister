@@ -7,8 +7,7 @@ import javax.servlet.annotation.WebServlet;
 @WebServlet(name = "GuessingServlet", urlPatterns = "/guess")
 public class CorrectGuessServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String colorpick = request.getParameter("color");
-        request.setAttribute("colorToPage", colorpick);
-        request.getRequestDispatcher("viewcolor.jsp").forward(request, response);
+        request.setAttribute("outcome", "Congrats, you're a winner!");
+        request.getRequestDispatcher("guessing-outcome.jsp").forward(request, response);
     }
 }

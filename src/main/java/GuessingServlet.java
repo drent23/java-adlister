@@ -7,12 +7,13 @@ import java.io.IOException;
 @WebServlet(name = "GuessingServlet", urlPatterns = "/guess")
 public class GuessingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //When the user gets to /pickcolor .. .
-        //Show them my JSP
-        req.getRequestDispatcher("pickcolor.jsp").forward(req, resp);
+        req.getRequestDispatcher("guessing.jsp").forward(req, resp);
         }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String colorpick = request.getParameter("colorpick");
-        response.sendRedirect("/viewcolor?color=" + colorpick);
+        int guess = Integer.parseInt(request.getParameter("numGuess"));
+        if(guess < 1 || guess > 3) {
+            response.sendRedirect(request.getContextPath() + "/guess");
+            return;
         }
+
 }

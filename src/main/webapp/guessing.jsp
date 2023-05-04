@@ -12,7 +12,7 @@
 </head>
 <body>
 <h1>Guess a number between 1 and 3:</h1>
-<form action="guessing-outcome.jsp" method="POST">
+<form action="/guess" method="POST">
 <input name="numGuess" placeholder="Numbers 1, 2, or 3 only" type="number">
 <button type="submit">Press for chance to win!</button>
 </form>

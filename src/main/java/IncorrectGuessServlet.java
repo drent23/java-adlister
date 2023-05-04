@@ -7,6 +7,8 @@ import java.io.IOException;
 @WebServlet(name = "IncorrectGuessServlet", urlPatterns = "/incorrect")
 public class IncorrectGuessServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.setAttribute("outcome", "Sorry, you lost!");
+        request.getRequestDispatcher("guessing-outcome.jsp").forward(request, response);
 
     }
 }

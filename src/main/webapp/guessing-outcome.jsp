@@ -11,5 +11,6 @@
     <title>Win or Lose?</title>
 </head>
 <body>
+<h1>You ${outcome}.  Please come back to play again, and be sure to tell your friends about us!</h1>
 </body>
 </html>
